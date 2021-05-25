@@ -21,7 +21,7 @@ public class postmanEcho {
 // Проверки
                     .then()
                     .statusCode(200)
-                    .body("data", equalTo("User"))
+                    .body("data", equalTo("User id"))
             ;
         }
 }
