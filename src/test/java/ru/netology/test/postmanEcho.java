@@ -11,8 +11,6 @@ public class postmanEcho {
     @Test
     public void postmanEchoTest(){
         given()
-                // Given - When - Then
-// Предусловия
                 .baseUri("https://postman-echo.com")
                 .body("some data") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
