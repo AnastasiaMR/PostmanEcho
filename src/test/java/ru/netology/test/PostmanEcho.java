@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 
-public class postmanEcho {
+public class PostmanEcho {
 
     @Test
     public void postmanEchoTest(){
@@ -14,14 +14,14 @@ public class postmanEcho {
 // Предусловия
             given()
                     .baseUri("https://postman-echo.com")
-                    .body("User id") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                    .body("Id") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                     .when()
                     .post("/post")
 // Проверки
                     .then()
                     .statusCode(200)
-                    .body("data", equalTo("User id"))
+                    .body("data", equalTo("Id"))
             ;
         }
 }
